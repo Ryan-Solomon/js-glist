@@ -1,3 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   background: linear-gradient(to right, #333, rgb(22, 22, 22));
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(209, 209, 209),
+    rgb(162, 162, 162)
+  );
+  padding: 2rem;
+  width: 68vw;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 15px rgba(238, 238, 238, 0.241);
+}
+
+.title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.add-item {
+  margin-bottom: 1rem;
+}
+
+.add-item label {
+  font-size: 1.6rem;
+}
+
+.add-item input {
+  height: 100%;
+  font-size: 1.4rem;
+  padding: 0 0.5rem;
+}
+
+.add-item .input {
+  display: flex;
+  flex-direction: flex-start;
+  flex-direction: row;
+  height: 3rem;
+}
+
+.add-item button {
+  background: none;
+  color: white;
+  border: 1px solid black;
+  height: 100%;
+  padding: 0 1rem;
+  transition: all 0.2s ease;
+}
+
+.add-item button:hover {
+  background: #333;
+  cursor: pointer;
+  transform: scale(0.96);
+}
+
+.grocery-items {
+  width: 80%;
+}
+
+.item-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.buttons button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+  color: #333;
+  background: white;
+  transform: scale(0.96);
+  cursor: pointer;
 }
