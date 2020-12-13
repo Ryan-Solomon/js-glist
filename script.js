@@ -22,6 +22,7 @@ const createItemElement = (text) => {
 // Consts
 const addItemButton = document.querySelector('.input button');
 const groceryItemsContainer = document.querySelector('.grocery-items');
+const clearButton = document.querySelector('.clear-btn');
 
 // Event Listeners
 
@@ -31,3 +32,8 @@ addItemButton.addEventListener('click', () => {
   const divToAdd = createItemElement(text);
   groceryItemsContainer.append(divToAdd);
 });
+
+clearButton.addEventListener(
+  'click',
+  () => (groceryItemsContainer.innerHTML = '')
+);
