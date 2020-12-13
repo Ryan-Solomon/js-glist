@@ -8,6 +8,7 @@ const createItemElement = (text) => {
   buttonContainer.classList.add('buttons');
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'X';
+  deleteButton.addEventListener('click', () => containerDiv.remove());
 
   title.textContent = text;
 
@@ -26,6 +27,7 @@ const groceryItemsContainer = document.querySelector('.grocery-items');
 
 addItemButton.addEventListener('click', () => {
   const text = document.querySelector('.input input').value;
+  document.querySelector('.input input').value = '';
   const divToAdd = createItemElement(text);
   groceryItemsContainer.append(divToAdd);
 });
